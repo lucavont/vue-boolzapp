@@ -21,3 +21,89 @@ body {
     width: 80%;
     display: flex;
 }
+
+.sx-wrapper {
+    width: 40%;
+    height: 100%;
+}
+
+.mio-profilo {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    background-color: #EAEAEA;
+    justify-content: space-between;
+}
+
+.mio-profilo img {
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.nome-utente {
+    display: flex;
+    align-items: center;
+}
+
+.icone-utente {
+    align-self: center;
+    color: gray;
+}
+
+.icone-utente i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.notifiche {
+    background-color: #8EDAFC;
+    display: flex;
+    height: 5rem;
+    align-items: center;
+}
+
+.notifiche>.text {
+    margin-left: 30px;
+}
+
+.notifiche>.bell {
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.notifiche a {
+    color: gray;
+}
+
+.notifiche i {
+    font-size: 20px;
+    color: #8EDAFC;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cerca {
+    background-color: #EAEAEA;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-cerca {
+    border: 1px solid lightgray;
+    width: 95%;
+    height: 40px;
+}
+
+.lista-chat {
+    background-color: white;
+    height: calc(100% - 50px - 5rem - 4rem);
+}

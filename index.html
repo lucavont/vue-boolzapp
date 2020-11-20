@@ -23,9 +23,36 @@
 <body>
     <div id="root" class="main-container">
         <div class="sx-wrapper">
-            <div class="mio-profilo"></div>
-            <div class="cerca"></div>
-            <div class="lista-chat"></div>
+            <div class="mio-profilo">
+                <div class="nome-utente">
+                    <img src="/img/avatar_5.jpg" alt="la mia foto profilo">
+                    <h3>Luca Cavretti</h3>
+                </div>
+                <div class="icone-utente">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="notifiche">
+                <div class="bell">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+                <div class="text">
+                    <h4>Ricevi notifiche di nuovi messaggi</h4>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
+            </div>
+            <div class="cerca">
+                <input class="input-cerca" type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+            <div class="lista-chat">
+                <ul>
+                    <li for="(items, index) in myArr" :key="'src'+index">{{items.src}}</li>
+                </ul>
+
+
+            </div>
         </div>
         <div class="dx-wrapper">
             <div class="utente"></div>
