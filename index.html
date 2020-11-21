@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="cerca">
-                <input class="input-cerca" type="text" placeholder="Cerca o inizia una nuova chat">
+                <input class="input-cerca" type="text" placeholder="   &#xf002; Cerca o inizia una nuova chat">
             </div>
             <div class="lista-chat">
                 <ul>
@@ -58,9 +58,30 @@
             </div>
         </div>
         <div class="dx-wrapper">
-            <div class="utente"></div>
-            <div class="chatbox"></div>
-            <div class="chat-input"></div>
+            <div class="utente">
+                <div class="profilo-chat">
+                    <div class="nome-utente-chat">
+                        <img src="/img/avatar_5.jpg" alt="la mia foto profilo">
+                        <div class="chatting-with">
+                            <h3 v-model="myArr[0].name">{{myArr[0].name}}</h3>
+                            <p>Ultimo accesso oggi alle</p>
+                        </div>
+                    </div>
+                    <div class="icone-utente">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbox">
+
+            </div>
+            <div class="chat-input">
+                <i class="far fa-smile"></i>
+                <input class="chat-input-text" type="text">
+                <i class="fas fa-microphone"></i>
+            </div>
         </div>
     </div>
 

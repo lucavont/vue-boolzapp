@@ -16,7 +16,6 @@ body {
 }
 
 .main-container {
-    border: 1px solid black;
     height: 90vh;
     width: 80%;
     display: flex;
@@ -27,7 +26,18 @@ body {
     height: 100%;
 }
 
+.input-cerca::placeholder {
+    font-family: 'Lato', "Font Awesome 5 Free" !important;
+    font-weight: 900;
+    color: rgb(155, 155, 155);
+}
+
 .mio-profilo {
+    border-right: 1px solid lightgray;
+}
+
+.mio-profilo,
+.profilo-chat {
     display: flex;
     width: 100%;
     height: 4rem;
@@ -35,7 +45,8 @@ body {
     justify-content: space-between;
 }
 
-.mio-profilo img {
+.mio-profilo img,
+.profilo-chat img {
     height: 50px;
     border-radius: 50%;
     margin-left: 10px;
@@ -101,6 +112,8 @@ body {
     border: 1px solid lightgray;
     width: 95%;
     height: 40px;
+    border-radius: 5px;
+    border: none;
 }
 
 .lista-chat {
@@ -126,5 +139,42 @@ body {
 .lista-chat img {
     height: 50px;
     border-radius: 50%;
+    margin-left: 10px;
+}
+
+.dx-wrapper {
+    width: 60%;
+    height: calc(100% - 4rem - 4rem);
+}
+
+.chatbox {
+    height: 100%;
+    background-color: #cccccc;
+    background-image: url(../img/mine.jpg);
+}
+
+.chat-input {
+    background-color: #EAEAEA;
+    height: 4rem;
+    color: gray;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chat-input-text {
+    width: 80%;
+    height: 60%;
+    border-radius: 5px;
+    border: none;
+}
+
+.nome-utente-chat {
+    display: flex;
+    align-items: center;
+}
+
+.chatting-with {
     margin-left: 10px;
 }
