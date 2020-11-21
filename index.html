@@ -48,7 +48,10 @@
             </div>
             <div class="lista-chat">
                 <ul>
-                    <li for="(items, index) in myArr" :key="'src'+index">{{}}</li>
+                    <li v-for="names in myArr">
+                        <img :src="names.src" alt="">
+                        <p>{{names.name}}</p>
+                    </li>
                 </ul>
 
 

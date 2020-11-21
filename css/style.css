@@ -107,3 +107,24 @@ body {
     background-color: white;
     height: calc(100% - 50px - 5rem - 4rem);
 }
+
+.lista-chat li {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    /* margin-left: 10px; */
+}
+
+.lista-chat p {
+    margin-left: 10px;
+}
+
+.lista-chat li:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
+
+.lista-chat img {
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}

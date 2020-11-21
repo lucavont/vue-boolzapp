@@ -11,11 +11,11 @@ const myApp = new Vue({
             },
             {
                 src: "img/avatar_3.jpg",
-                Name: "Matteo"
+                name: "Matteo"
             },
             {
                 src: "img/avatar_6.jpg",
-                Name: "Jessico Calcetto"
+                name: "Jessico Calcetto"
             }
         ],
     },
