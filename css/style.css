@@ -13,27 +13,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 800px;
 }
 
 .main-container {
     height: 90vh;
     width: 80%;
     display: flex;
+    min-width: 800px;
 }
 
 .sx-wrapper {
     width: 40%;
     height: 100%;
+    min-width: 350px;
 }
 
 .input-cerca::placeholder {
     font-family: 'Lato', "Font Awesome 5 Free" !important;
     font-weight: 900;
     color: rgb(155, 155, 155);
-}
-
-.mio-profilo {
-    border-right: 1px solid lightgray;
 }
 
 .mio-profilo,
@@ -43,6 +42,10 @@ body {
     height: 4rem;
     background-color: #EAEAEA;
     justify-content: space-between;
+}
+
+.mio-profilo {
+    border-right: 1px solid lightgray;
 }
 
 .mio-profilo img,
@@ -119,6 +122,7 @@ body {
 .lista-chat {
     background-color: white;
     height: calc(100% - 50px - 5rem - 4rem);
+    overflow: scroll;
 }
 
 .lista-chat li {
