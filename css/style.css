@@ -157,6 +157,14 @@ body {
     height: calc(100% - 4rem - 4rem);
 }
 
+.chatting-with h3 {
+    font-size: 16px;
+}
+
+.chatting-with p {
+    font-size: 14px;
+}
+
 .chatbox {
     height: 100%;
     background-color: #cccccc;

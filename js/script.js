@@ -4,6 +4,10 @@ let currentDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
 const myApp = new Vue({
     el: '#root',
     data: {
+        loggedUser: {
+            src: 'img/avatar_5.jpg',
+            name: 'Luca Cavretti'
+        },
         myArr: [{
                 src: "img/avatar_1.jpg",
                 name: "Marco",
