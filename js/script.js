@@ -18,6 +18,13 @@ const myApp = new Vue({
                 name: "Jessico Calcetto"
             }
         ],
+        userIndex: 0,
+        isActive: false
     },
-    methods: {}
+    methods: {
+        changeContact: function(index) {
+            this.userIndex = index;
+            this.isActive = true
+        },
+    }
 })

@@ -48,7 +48,7 @@
             </div>
             <div class="lista-chat">
                 <ul>
-                    <li v-for="names in myArr">
+                    <li v-bind:class="{ active: isActive }" @click="changeContact(i)" v-for="(names, i) in myArr">
                         <img :src="names.src" alt="">
                         <p>{{names.name}}</p>
                     </li>
@@ -61,9 +61,9 @@
             <div class="utente">
                 <div class="profilo-chat">
                     <div class="nome-utente-chat">
-                        <img src="/img/avatar_5.jpg" alt="la mia foto profilo">
+                        <img :src="myArr[userIndex].src" alt="la mia foto profilo">
                         <div class="chatting-with">
-                            <h3 v-model="myArr[0].name">{{myArr[0].name}}</h3>
+                            <h3>{{myArr[userIndex].name}}</h3>
                             <p>Ultimo accesso oggi alle</p>
                         </div>
                     </div>

@@ -123,6 +123,7 @@ body {
     background-color: white;
     height: calc(100% - 50px - 5rem - 4rem);
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .lista-chat li {
@@ -130,6 +131,11 @@ body {
     align-items: center;
     height: 80px;
     /* margin-left: 10px; */
+}
+
+.lista-chat li:hover {
+    background-color: lightgray;
+    cursor: pointer;
 }
 
 .lista-chat p {
@@ -181,4 +187,8 @@ body {
 
 .chatting-with {
     margin-left: 10px;
+}
+
+.active {
+    background-color: gray;
 }
