@@ -161,6 +161,9 @@ body {
     height: 100%;
     background-color: #cccccc;
     background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
 .chat-input {
@@ -191,4 +194,41 @@ body {
 
 .active {
     background-color: gray;
+}
+
+.messaggio {
+    position: relative;
+}
+
+.chatbox>.messaggio.received {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    width: calc(40% - 40px);
+    margin-left: 40px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.chatbox>.messaggio.sent {
+    background-color: #D5F9BA;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    width: calc(40% - 40px);
+    margin-right: 40px;
+    align-self: flex-end;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.chatbox>.messaggio>.message-time {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    color: gray;
+    font-size: 10px;
 }

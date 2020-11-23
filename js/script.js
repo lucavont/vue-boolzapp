@@ -1,25 +1,75 @@
+let date = new Date();
+let currentDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+
 const myApp = new Vue({
     el: '#root',
     data: {
         myArr: [{
                 src: "img/avatar_1.jpg",
-                name: "Marco"
+                name: "Marco",
+                lastSeen: date.toLocaleTimeString(),
+                chat: [{
+                        type: "sent",
+                        sentTime: currentDate,
+                        text: "Ciao come stai??"
+                    },
+                    {
+                        type: "received",
+                        sentTime: currentDate,
+                        text: "Io tutto bene e tu?"
+                    }
+                ]
             },
             {
                 src: "img/avatar_2.jpg",
-                name: "Gabriele"
+                name: "Gabriele",
+                lastSeen: date.toLocaleTimeString(),
+                chat: [{
+                        type: "sent",
+                        sentTime: currentDate,
+                        text: "Ciao come stai??"
+                    },
+                    {
+                        type: "received",
+                        sentTime: currentDate,
+                        text: "Io tutto bene e tu?"
+                    }
+                ]
             },
             {
                 src: "img/avatar_3.jpg",
-                name: "Matteo"
+                name: "Matteo",
+                lastSeen: date.toLocaleTimeString(),
+                chat: [{
+                        type: "sent",
+                        sentTime: currentDate,
+                        text: "Ciao come stai??"
+                    },
+                    {
+                        type: "received",
+                        sentTime: currentDate,
+                        text: "Io tutto bene e tu?"
+                    }
+                ]
             },
             {
                 src: "img/avatar_6.jpg",
-                name: "Jessico Calcetto"
+                name: "Jessico Calcetto",
+                lastSeen: date.toLocaleTimeString(),
+                chat: [{
+                        type: "sent",
+                        sentTime: currentDate,
+                        text: "Ciao come stai??"
+                    },
+                    {
+                        type: "received",
+                        sentTime: currentDate,
+                        text: "Io tutto bene e tu?"
+                    }
+                ]
             }
         ],
-        userIndex: 0,
-        isActive: false
+        userIndex: 0
     },
     methods: {
         changeContact: function(index) {

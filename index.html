@@ -48,7 +48,7 @@
             </div>
             <div class="lista-chat">
                 <ul>
-                    <li v-bind:class="{ active: isActive }" @click="changeContact(i)" v-for="(names, i) in myArr">
+                    <li v-bind:class="{active: i == userIndex}" @click="changeContact(i)" v-for="(names, i) in myArr">
                         <img :src="names.src" alt="">
                         <p>{{names.name}}</p>
                     </li>
@@ -64,7 +64,7 @@
                         <img :src="myArr[userIndex].src" alt="la mia foto profilo">
                         <div class="chatting-with">
                             <h3>{{myArr[userIndex].name}}</h3>
-                            <p>Ultimo accesso oggi alle</p>
+                            <p>Ultimo accesso oggi alle {{ myArr[userIndex].lastSeen }}</p>
                         </div>
                     </div>
                     <div class="icone-utente">
@@ -75,7 +75,10 @@
                 </div>
             </div>
             <div class="chatbox">
-
+                <div v-for="message in myArr[userIndex].chat" class="messaggio" :class="message.type">
+                    <p>{{ message.text }}</p>
+                    <p class="message-time">{{ message.sentTime }}</p>
+                </div>
             </div>
             <div class="chat-input">
                 <i class="far fa-smile"></i>
