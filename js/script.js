@@ -22,7 +22,7 @@ const myApp = new Vue({
                         sentTime: currentDate,
                         text: "Io tutto bene e tu?"
                     }
-                ]
+                ],
             },
             {
                 src: "img/avatar_2.jpg",
@@ -73,12 +73,31 @@ const myApp = new Vue({
                 ]
             }
         ],
-        userIndex: 0
+        userIndex: 0,
+        txtMessage: ""
     },
     methods: {
         changeContact: function(index) {
             this.userIndex = index;
             this.isActive = true
         },
+        submit: function() {
+            this.myArr[this.userIndex].chat.push({
+                type: "sent",
+                sentTime: currentDate,
+                text: this.txtMessage
+            })
+            setTimeout(this.possibleAnswers, 2000);
+            this.txtMessage = ""
+        },
+        possibleAnswers: function() {
+            const randomAnswers = ["Ok", "Ho capito", "Stammi bene!", "Ciao!"];
+            const randomIndex = Math.floor(Math.random() * 4);
+            this.myArr[this.userIndex].chat.push({
+                type: "received",
+                sentTime: currentDate,
+                text: randomAnswers[randomIndex]
+            })
+        }
     }
 })

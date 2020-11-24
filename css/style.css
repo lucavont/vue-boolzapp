@@ -189,6 +189,8 @@ body {
     height: 60%;
     border-radius: 5px;
     border: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .nome-utente-chat {
@@ -201,11 +203,34 @@ body {
 }
 
 .active {
-    background-color: gray;
+    background-color: #C0C0C0;
 }
 
 .messaggio {
     position: relative;
+}
+
+.messaggio .message-time {
+    visibility: hidden;
+}
+
+.messaggio:hover .message-time {
+    visibility: visible;
+}
+
+.messaggio:hover a {
+    display: block;
+}
+
+.messaggio p {
+    hyphens: auto;
+}
+
+.messaggio a {
+    position: absolute;
+    right: 5%;
+    display: none;
+    color: gray;
 }
 
 .chatbox>.messaggio.received {
@@ -213,11 +238,13 @@ body {
     border-radius: 10px;
     min-height: 50px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width: calc(40% - 40px);
     margin-left: 40px;
     padding-left: 10px;
     margin-top: 10px;
+    flex: 0 0 auto;
 }
 
 .chatbox>.messaggio.sent {
@@ -225,18 +252,17 @@ body {
     border-radius: 10px;
     min-height: 50px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width: calc(40% - 40px);
     margin-right: 40px;
     align-self: flex-end;
     margin-top: 10px;
     padding-left: 10px;
+    flex: 0 0 auto;
 }
 
 .chatbox>.messaggio>.message-time {
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
     color: gray;
     font-size: 10px;
 }

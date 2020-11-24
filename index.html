@@ -78,11 +78,12 @@
                 <div v-for="message in myArr[userIndex].chat" class="messaggio" :class="message.type">
                     <p>{{ message.text }}</p>
                     <p class="message-time">{{ message.sentTime }}</p>
+                    <a href=""><i class="fas fa-angle-down"></i></a>
                 </div>
             </div>
             <div class="chat-input">
                 <i class="far fa-smile"></i>
-                <input class="chat-input-text" type="text">
+                <input class="chat-input-text" type="text" v-model="txtMessage" @keyup.enter="submit">
                 <i class="fas fa-microphone"></i>
             </div>
         </div>
