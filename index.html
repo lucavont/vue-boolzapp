@@ -44,11 +44,11 @@
                 </div>
             </div>
             <div class="cerca">
-                <input v-model="findInput" class="input-cerca" type="text" placeholder="   &#xf002; Cerca o inizia una nuova chat">
+                <input v-model="findInput" @input="filterUsers" class="input-cerca" type="text" placeholder="   &#xf002; Cerca o inizia una nuova chat">
             </div>
             <div class="lista-chat">
                 <ul>
-                    <li v-bind:class="{active: i == userIndex}" @click="changeContact(i)" v-for="(names, i) in filterUsers">
+                    <li v-bind:class="{active: i == userIndex, visibility: !names.visible}" @click="changeContact(i)" v-for="(names, i) in myArr">
                         <img :src="names.src" alt="">
                         <p>{{names.name}}</p>
                     </li>

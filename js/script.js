@@ -23,6 +23,7 @@ const myApp = new Vue({
                         text: "Io tutto bene e tu?"
                     }
                 ],
+                visible: true,
             },
             {
                 src: "img/avatar_2.jpg",
@@ -38,7 +39,8 @@ const myApp = new Vue({
                         sentTime: currentDate,
                         text: "Io tutto bene e tu?"
                     }
-                ]
+                ],
+                visible: true,
             },
             {
                 src: "img/avatar_3.jpg",
@@ -54,7 +56,8 @@ const myApp = new Vue({
                         sentTime: currentDate,
                         text: "Io tutto bene e tu?"
                     }
-                ]
+                ],
+                visible: true,
             },
             {
                 src: "img/avatar_6.jpg",
@@ -70,7 +73,8 @@ const myApp = new Vue({
                         sentTime: currentDate,
                         text: "Io tutto bene e tu?"
                     }
-                ]
+                ],
+                visible: true,
             }
         ],
         userIndex: 0,
@@ -100,12 +104,15 @@ const myApp = new Vue({
                 text: randomAnswers[randomIndex]
             })
         },
-    },
-    computed: {
-        filterUsers() {
-            return this.myArr.filter(contact => {
-                return contact.name.toLowerCase().includes(this.findInput.toLowerCase());
+        filterUsers: function() {
+            this.myArr.forEach((contact) => {
+                console.log(this);
+                if (contact.name.toLowerCase().includes(this.findInput.toLowerCase())) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
             });
         }
-    }
+    },
 })
