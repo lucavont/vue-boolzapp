@@ -44,11 +44,11 @@
                 </div>
             </div>
             <div class="cerca">
-                <input class="input-cerca" type="text" placeholder="   &#xf002; Cerca o inizia una nuova chat">
+                <input v-model="findInput" class="input-cerca" type="text" placeholder="   &#xf002; Cerca o inizia una nuova chat">
             </div>
             <div class="lista-chat">
                 <ul>
-                    <li v-bind:class="{active: i == userIndex}" @click="changeContact(i)" v-for="(names, i) in myArr">
+                    <li v-bind:class="{active: i == userIndex}" @click="changeContact(i)" v-for="(names, i) in filterUsers">
                         <img :src="names.src" alt="">
                         <p>{{names.name}}</p>
                     </li>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="chatbox">
+            <div id="prova" class="chatbox">
                 <div v-for="message in myArr[userIndex].chat" class="messaggio" :class="message.type">
                     <p>{{ message.text }}</p>
                     <p class="message-time">{{ message.sentTime }}</p>

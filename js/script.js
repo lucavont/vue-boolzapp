@@ -74,6 +74,7 @@ const myApp = new Vue({
             }
         ],
         userIndex: 0,
+        findInput: "",
         txtMessage: ""
     },
     methods: {
@@ -98,6 +99,13 @@ const myApp = new Vue({
                 sentTime: currentDate,
                 text: randomAnswers[randomIndex]
             })
+        },
+    },
+    computed: {
+        filterUsers() {
+            return this.myArr.filter(contact => {
+                return contact.name.toLowerCase().includes(this.findInput.toLowerCase());
+            });
         }
     }
 })
